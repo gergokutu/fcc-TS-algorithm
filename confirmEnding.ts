@@ -1,15 +1,15 @@
 // Check if a string (first argument, str) ends with the given target string (second argument, target).
 
 interface confirmEndingParams {
-  str: string;
-  target: string;
+	str: string;
+	target: string;
 }
 
 // V1
 const confirmEnding = (params: confirmEndingParams): boolean => {
-  const myRegex = new RegExp(`${params.target}$`);
-  return myRegex.test(params.str);
-}
+	const myRegex = new RegExp(`${params.target}$`);
+	return myRegex.test(params.str);
+};
 
 // V2
 // const confirmEnding = (params: confirmEndingParams): boolean => {
@@ -51,6 +51,7 @@ const confirmEnding = (params: confirmEndingParams): boolean => {
 //   return true;
 // }
 
-console.log('Should return true >', confirmEnding({ str: "Banstian", target: "ion"}));
-
-
+console.log(
+	'Should return true >',
+	confirmEnding({ str: 'Banstian', target: 'ion' })
+);

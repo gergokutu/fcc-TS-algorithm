@@ -2,13 +2,12 @@
 // and returns the first element in it that passes a 'truth test'.
 // This means that given an element x, the 'truth test' is passed if func(x) is true.
 // If no element passes the test, return undefined.
-
-interface IfindElement {
+interface IParams2 {
 	arr: number[];
 	func: (num: number) => boolean;
 }
 
-const findElement = (params: IfindElement): number => {
+const findElement = (params: IParams2): number | undefined => {
 	const { arr, func } = params;
 	return arr.find(func);
 };

@@ -1,0 +1,24 @@
+{
+	"name": "basic-algorithm-scripting",
+	"version": "1.0.0",
+	"description": "",
+	"main": "index.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/gergokutu/fcc-TS-basic-algorithm.git"
+	},
+	"keywords": [],
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/gergokutu/fcc-TS-basic-algorithm/issues"
+	},
+	"homepage": "https://github.com/gergokutu/fcc-TS-basic-algorithm#readme",
+	"dependencies": {
+		"ts-node": "^9.1.0",
+		"typescript": "^4.1.2"
+	}
+}
