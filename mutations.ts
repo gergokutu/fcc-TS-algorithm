@@ -39,8 +39,7 @@
 const mutation = (arr: string[]): boolean => {
   const target: string = arr[0].toLowerCase();
   const test: string[] = arr[1].toLowerCase().split('');
-  const res = test.every(letter => target.includes(letter));
-  return res;
+  return test.every(letter => target.includes(letter));
 };
 
 console.log('Should be false >', mutation(['elloh', 'eohy']));
