@@ -25,4 +25,7 @@ const frankenSplice = (params: IFrankenParams): number[] => {
 //   return result;
 // };
 
-console.log('Should be [4, 1, 2, 3, 5, 6] >', frankenSplice({ arr1: [1, 2, 3], arr2: [4, 5, 6], n: 1 }));
+console.log(
+  'Should be [4, 1, 2, 3, 5, 6] >',
+  frankenSplice({ arr1: [1, 2, 3], arr2: [4, 5, 6], n: 1 })
+);
