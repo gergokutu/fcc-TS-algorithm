@@ -3,6 +3,6 @@
 
 const booWho = (bool: any): boolean => {
   return typeof bool !== 'boolean' ? false : true;
-}
+};
 
 console.log('Should be > false', booWho(5));
