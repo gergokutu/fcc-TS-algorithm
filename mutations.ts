@@ -22,17 +22,25 @@
 // };
 
 // V2
+// const mutation = (arr: string[]): boolean => {
+//   const target: string = arr[0].toLowerCase();
+//   const test: string = arr[1].toLowerCase();
+
+//   for (let i = 0; i < test.length; i++) {
+//     if (target.indexOf(test[i]) === -1) {
+//       return false;
+//     }
+//   }
+
+//   return true;
+// };
+
+//V3
 const mutation = (arr: string[]): boolean => {
   const target: string = arr[0].toLowerCase();
-  const test: string = arr[1].toLowerCase();
-
-  for (let i = 0; i < test.length; i++) {
-    if (target.indexOf(test[i]) === -1) {
-      return false;
-    }
-  }
-
-  return true;
+  const test: string[] = arr[1].toLowerCase().split('');
+  const res = test.every(letter => target.includes(letter));
+  return res;
 };
 
-console.log('Should be false >', mutation(['elloh', 'heo']));
+console.log('Should be false >', mutation(['elloh', 'eohy']));
