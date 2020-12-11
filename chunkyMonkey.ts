@@ -1,4 +1,4 @@
-// Write a function that splits an array (first argument) into groups the length of size (second argument). 
+// Write a function that splits an array (first argument) into groups the length of size (second argument).
 // Returns them as a two-dimensional array.
 
 interface IChunkParams {
@@ -33,4 +33,7 @@ const chunkArrayInGroups = (params: IChunkParams): (string[] | number[])[] => {
     : [arr.splice(0, size)].concat(chunkArrayInGroups({ arr, size }));
 };
 
-console.log("Should be [['a', 'b'], ['c', 'd']] >", chunkArrayInGroups({ arr: ["a", "b", "c", "d"], size: 2 }));
+console.log(
+  "Should be [['a', 'b'], ['c', 'd']] >",
+  chunkArrayInGroups({ arr: ['a', 'b', 'c', 'd'], size: 2 })
+);
