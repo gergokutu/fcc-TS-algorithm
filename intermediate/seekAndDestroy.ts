@@ -15,4 +15,15 @@ const destroyer = (...args: any[]): number[] => {
   return args[0].filter((item: number) => !args.slice(1).includes(item));
 };
 
-console.log('Should be [ 1, 5, 1 ] >', destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3));
+// v3
+// Incase you want to loop
+// const destroyer = (...args: any[]): number[] => {
+//   const arr: number[] = args[0];
+//   const remaining: number[] = args.slice(1);
+//   const result: number[] = [];
+//   for (let i = 0; i < arr.length; i++) {
+//     !remaining.includes(arr[i]) && result.push(arr[i]);
+//   }
+//   return result;
+// }
+// console.log('Should be [ 1, 5, 1 ] >', destroyer([1, 2, 3, 5, 1, 2, 3], 2, 3));
