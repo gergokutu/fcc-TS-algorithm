@@ -24,14 +24,12 @@
 // };
 
 // V2 Using Generics
-interface IName<T, U> {
+interface IName<T> {
   collection: T[];
   source: object;
 }
 
-const whatIsInAName = <T extends object, U extends object>(
-  params: IName<T, U>
-): T[] => {
+const whatIsInAName = <T extends object>(params: IName<T>): T[] => {
   const { collection, source } = params;
   const arr: string[] = Object.keys(source);
   return collection.filter((col: T) => {
