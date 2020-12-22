@@ -9,16 +9,16 @@ interface IMyReplace {
 }
 
 // v1
-const myReplace = (param: IMyReplace): string => {
-  const { before, after, str } = param;
-  const myRegExp: RegExp = new RegExp(`${before}`, 'g');
+// const myReplace = (param: IMyReplace): string => {
+//   const { before, after, str } = param;
+//   const myRegExp: RegExp = new RegExp(`${before}`, 'g');
 
-  return str.replace(myRegExp, match => {
-    return before[0] === before[0].toUpperCase()
-      ? after[0].toUpperCase() + after.slice(1)
-      : after.toLowerCase();
-  });
-};
+//   return str.replace(myRegExp, match => {
+//     return before[0] === before[0].toUpperCase()
+//       ? after[0].toUpperCase() + after.slice(1)
+//       : after.toLowerCase();
+//   });
+// };
 
 // v2
 // const myReplace = (param: IMyReplace) => {
@@ -66,11 +66,20 @@ const myReplace = (param: IMyReplace): string => {
 //   return str.replace(before, after);
 // };
 
+//V5
+const myReplace = (param: IMyReplace): string => {
+  let { before, after, str } = param;
+  after = /^[A-Z]/.test(before)
+    ? after.replace(/^\w/, word => word.toUpperCase())
+    : after.replace(/^\w/, word => word.toLowerCase());
+  return str.replace(before, after);
+};
+
 console.log(
   'Should be "I think we should look down there" >',
   myReplace({
-    str: '"I think we should look up there"',
-    before: 'up',
+    str: '"I think we should look Up there"',
+    before: 'Up',
     after: 'Down'
   })
 );
