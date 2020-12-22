@@ -11,10 +11,11 @@
 
 // v2
 const spinalCase = (str: string): string => {
-  return str
-    .trim()
-    .replace(/_|\s+|(?<=[A-Za-z0-9])(?=[A-Z])/g, '-')
-    .toLowerCase();
+  const arrOfLetters: RegExpMatchArray = str.match(
+    /\w[a-z]+/g
+  ) as RegExpMatchArray;
+  console.log(arrOfLetters);
+  return arrOfLetters.join('-').toLowerCase();
 };
 
 console.log(
