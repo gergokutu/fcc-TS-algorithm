@@ -14,7 +14,6 @@ const spinalCase = (str: string): string => {
   const arrOfLetters: RegExpMatchArray = str.match(
     /\w[a-z]+/g
   ) as RegExpMatchArray;
-  console.log(arrOfLetters);
   return arrOfLetters.join('-').toLowerCase();
 };
 
